@@ -1,10 +1,14 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "my first project with JS ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   },
   "repository": {
     "type": "git",
