@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "0.0.1",
-  "description": "my first project with JS ",
+  "description": "my first project with JS",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -22,5 +22,10 @@
   "homepage": "https://github.com/Alexey-654/frontend-project-lvl1#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
