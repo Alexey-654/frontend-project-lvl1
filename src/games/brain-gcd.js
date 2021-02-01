@@ -1,16 +1,17 @@
 import { engine } from '../index.js';
 
 const getGcd = (number1, number2) => {
-  const smallNum = number1 < number2 ? number1 : number2
+  const smallNum = number1 < number2 ? number1 : number2;
   if (number1 % number2 === 0) {
     return smallNum;
   }
   let i = Math.floor(smallNum / 2);
-  for (i; i >= 1; i -= 1) {
+  for (i; i > 1; i -= 1) {
     if (number1 % i === 0 && number2 % i === 0) {
       return String(i);
     }
   }
+  return String(1);
 };
 
 export const brainGcd = (circleCount) => {
