@@ -1,4 +1,4 @@
-import { engine } from '../index.js';
+import { engine, generateRandomInt } from '../index.js';
 
 const calc = (number1, number2, operator) => {
   switch (operator) {
@@ -17,8 +17,8 @@ export const brainCalc = (circleCount) => {
   const gameDescription = 'What is the result of the expression?';
   const gameData = [];
   for (let i = 0; i < circleCount; i += 1) {
-    const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomNumber2 = Math.floor(Math.random() * 100);
+    const randomNumber1 = generateRandomInt();
+    const randomNumber2 = generateRandomInt(1, 50);
     const operators = ['+', '-', '*'];
     const randomItem = Math.floor(Math.random() * operators.length);
     const question = `${randomNumber1} ${operators[randomItem]} ${randomNumber2}`;

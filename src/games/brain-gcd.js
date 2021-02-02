@@ -1,4 +1,4 @@
-import { engine } from '../index.js';
+import { engine, generateRandomInt } from '../index.js';
 
 const getGcd = (number1, number2) => {
   const smallNum = number1 < number2 ? number1 : number2;
@@ -19,8 +19,8 @@ export const brainGcd = (circleCount) => {
   const gameData = [];
 
   for (let i = 0; i < circleCount; i += 1) {
-    const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomNumber2 = Math.floor(Math.random() * 50);
+    const randomNumber1 = generateRandomInt();
+    const randomNumber2 = generateRandomInt(1, 50);
     const question = `${randomNumber1} ${randomNumber2}`;
 
     const correctAnswer = getGcd(randomNumber1, randomNumber2);

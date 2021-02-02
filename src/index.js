@@ -3,6 +3,12 @@ import readlineSync from 'readline-sync';
 export const circleCount = 3;
 export const intro = 'Welcome to the Brain Games!';
 
+export const generateRandomInt = (min = 1, max = 100) => {
+  const minInt = Math.ceil(min);
+  const maxInt = Math.floor(max);
+  return Math.floor(Math.random() * (maxInt - minInt + 1)) + minInt;
+};
+
 export const engine = (gameDescription, gameData) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
