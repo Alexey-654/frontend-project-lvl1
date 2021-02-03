@@ -16,7 +16,7 @@ export const brainProgression = (circleCount) => {
   for (let i = 0; i < circleCount; i += 1) {
     const length = 10;
     const progressionNumbers = generateProgression(length);
-    const missedItem = generateRandomInt(1, length);
+    const missedItem = generateRandomInt(0, length - 1);
     const correctAnswer = String(progressionNumbers[missedItem]);
     progressionNumbers[missedItem] = '..';
     const question = progressionNumbers.join(' ');
