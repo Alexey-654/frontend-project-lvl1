@@ -3,7 +3,7 @@ import { engine, generateRandomInt } from '../index.js';
 const getGcd = (number1, number2) => {
   const smallNum = number1 < number2 ? number1 : number2;
   if (number1 % number2 === 0) {
-    return smallNum;
+    return String(smallNum);
   }
   let i = Math.floor(smallNum / 2);
   for (i; i > 1; i -= 1) {
